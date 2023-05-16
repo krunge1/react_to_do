@@ -1,9 +1,9 @@
 import React from 'react'
 
-const DisplayToDo = () => {
+const DisplayToDo = (props) => {
     return (
         <div>
-
+            <p>{props.toDo}</p>
         </div>
     )
 }

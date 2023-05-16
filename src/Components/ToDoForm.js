@@ -1,8 +1,6 @@
 import React, {useState} from 'react'
 
-const ToDoForm = () => {
-
-  const [toDo, setToDo] = useState("");
+const ToDoForm = (props) => {
 
   const handleSubmit = (e) => {
     e.prevent.default();
