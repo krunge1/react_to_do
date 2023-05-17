@@ -1,12 +1,17 @@
-import './App.css';
+import React, {useState} from 'react';
 import ToDoForm from './Components/ToDoForm';
 import DisplayToDo from './Components/DisplayToDo';
 
 function App() {
+  const [currentToDos, setCurrentToDos] = useState([]);
+
+  const makeToDo = (newToDo) => {
+    setCurrentToDos([...currentToDos, newToDo]);
+  }
   return (
     <div>
-      <ToDoForm/>
-      <DisplayToDo/>
+      <ToDoForm onNewToDo={makeToDo}/>
+      <DisplayToDo toDo={currentToDos}/>
     </div>
   );
 }
