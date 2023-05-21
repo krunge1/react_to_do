@@ -1,17 +1,15 @@
 import React, {useState} from 'react';
+import './App.css';
 import ToDoForm from './Components/ToDoForm';
 import DisplayToDo from './Components/DisplayToDo';
 
 function App() {
   const [currentToDos, setCurrentToDos] = useState([]);
 
-  const makeToDo = (newToDo) => {
-    setCurrentToDos([...currentToDos, newToDo]);
-  }
   return (
     <div>
-      <ToDoForm onNewToDo={makeToDo}/>
-      <DisplayToDo toDo={currentToDos}/>
+      <ToDoForm currentToDos={currentToDos} setCurrentToDos={setCurrentToDos}/>
+      <DisplayToDo currentToDos={currentToDos} setCurrentToDos={setCurrentToDos}/>
     </div>
   );
 }

@@ -1,14 +1,19 @@
 import React, {useState} from 'react'
 
 const ToDoForm = (props) => {
-
+  const {currentToDos, setCurrentToDos} = props;
   const [toDo, setToDo] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    props.onNewToDo(toDo);
+    const newToDo = {
+      name: toDo,
+      completed: false,
+    }
+    setCurrentToDos([...currentToDos, newToDo]);
     setToDo("");
   };
+  
   
   return (
     <div>
