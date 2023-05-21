@@ -7,7 +7,7 @@ function App() {
   const [currentToDos, setCurrentToDos] = useState([]);
 
   return (
-    <div>
+    <div className='App'>
       <ToDoForm currentToDos={currentToDos} setCurrentToDos={setCurrentToDos}/>
       <DisplayToDo currentToDos={currentToDos} setCurrentToDos={setCurrentToDos}/>
     </div>

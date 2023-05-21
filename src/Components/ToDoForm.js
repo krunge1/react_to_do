@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import '../App.css';
 
 const ToDoForm = (props) => {
   const {currentToDos, setCurrentToDos} = props;
@@ -19,7 +20,6 @@ const ToDoForm = (props) => {
     <div>
       <form onSubmit = {handleSubmit}>
         <h2>Enter your To Do!</h2>
-        <label>To Do:</label>
         <textarea
           type="text-area"
           placeholder='What do we need to get done?'
